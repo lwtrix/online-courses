@@ -8,6 +8,10 @@ body {
     font-family: Inter, Arial;
 }
 
+.pad {
+    padding: 15px 2.5%;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -43,6 +47,17 @@ header .profile-status {
     height: 50px;
     position: relative;
     margin-right: 10px;
+    position: relative;
+}
+
+.notification-container::before {
+    content: '';
+    background-color: #754ffe;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 5px;
+    border-radius: 50%;
 }
 
 .profile-status .notification-container img {
@@ -54,11 +69,28 @@ header .profile-status {
     opacity: 60%;
 }
 
+.profile-status .profile-picture {
+    position: relative;
+}
+
+.profile-status .profile-picture::before {
+    content: '';
+    background-color: rgb(87, 221, 87);
+    width: 12px;
+    border: 3px solid white;
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    right: 3px;
+    bottom: 3px;
+}
+
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #754ffe;
+    margin: 0;
 }
 
 .hero .hero-text {
@@ -67,7 +99,7 @@ header .profile-status {
 }
 
 .hero-text .heading {
-    font-size: 32px;
+    font-size: 42px;
 }
 
 .hero-text .text {
@@ -110,8 +142,8 @@ header .profile-status {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
-    margin: 0 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .info-banner .topic-container {
@@ -136,7 +168,8 @@ header .profile-status {
 
 .topic-container .text-container .title{
     font-weight: 700;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .topic-container .text-container .info {
@@ -147,7 +180,6 @@ header .profile-status {
 
 .topic-list {
     background-color: rgb(226, 226, 226);
-    padding: 10px 2.5%;
     display: flex;
     flex-direction: column;
 }
@@ -167,10 +199,9 @@ header .profile-status {
 .course-card {
     display: flex;
     flex-direction: column;
-    width: 230px;
+    width: 24%;
     background-color: white;
     border-radius: 10px;
-    margin: 0 5px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.322);
 }
 
@@ -190,7 +221,6 @@ header .profile-status {
     font-size: 18px;
     margin: 10px 0;
     color: black;
-    font-weight: 300;
     line-height: 25px;
 }
 
